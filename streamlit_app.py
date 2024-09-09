@@ -1,24 +1,30 @@
+import time
 import streamlit as st
-from openai import OpenAI
 
+
+def string_to_stream(input_string, delay=0.05):
+    for word in input_string.split():
+        yield word + " "
+        time.sleep(delay)
+
+        
 # Show title and description.
 st.title("💬 Chatbot")
 st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses. "
-    "To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
+    "This is a simple chatbot that simply echoes your inputs to generate responses. "
+    "TODO: connect to backend."
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
-openai_api_key = st.text_input("OpenAI API Key", type="password")
-if not openai_api_key:
-    st.info("Please add your OpenAI API key to continue.", icon="🗝️")
+mistral_api_key = st.text_input("Mistral API Key", type="password")
+if not mistral_api_key:
+    st.info("Please add your Mistral API key to continue.", icon="🗝️")
 else:
 
-    # Create an OpenAI client.
-    client = OpenAI(api_key=openai_api_key)
+    # Create an Mistral client.
+    #client = Mistral(api_key=mistral_api_key)
 
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
@@ -40,14 +46,15 @@ else:
             st.markdown(prompt)
 
         # Generate a response using the OpenAI API.
-        stream = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+        _ = """ stream = client.chat.completions.create(
+            model="mistral-nemo-12b",
             messages=[
                 {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
             stream=True,
-        )
+        ) """
+        stream = string_to_stream(prompt)
 
         # Stream the response to the chat using `st.write_stream`, then store it in 
         # session state.
