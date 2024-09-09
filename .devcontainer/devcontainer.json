@@ -29,7 +29,7 @@
   "updateContentCommand": "sudo apt update && sudo apt upgrade -y && sudo apt install direnv && [ -f packages.txt ] && sudo xargs apt install -y <packages.txt; pipx ensurepath; pipx install poetry; poetry update; echo '✅ Packages installed and Requirements met'",
   "postStartCommand": "echo 'eval \"$(starship init bash)\"\neval \"$(direnv hook bash)\"' >> ~/.bashrc",
   "postAttachCommand": {
-    "server": "poetry run streamlit run scripts/bot.py --server.enableCORS false --server.enableXsrfProtection false"
+    "server": "poetry run streamlit run scripts/bot.py --server.enableCORS false --server.enableXsrfProtection false --browser.gatherUsageStats false"
   },
   "portsAttributes": {
     "8501": {

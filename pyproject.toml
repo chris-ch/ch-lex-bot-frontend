@@ -6,13 +6,15 @@ authors = ["Christophe Alexandre <christophe.alexandre@pm.me>"]
 readme = "README.md"
 packages = [
     {include = "**/*.py", from="src"},
-    {include = "**/*.py", from="scripts"}
+    {include = "**/*.py", from="scripts"},
+    {include = "resources"}
 ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 streamlit = "^1.38.0"
-
+mistralai = "^1.0.3"
+chromadb = "^0.5.5"
 
 [build-system]
 requires = ["poetry-core"]

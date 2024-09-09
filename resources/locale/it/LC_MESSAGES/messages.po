@@ -1,0 +1,47 @@
+# Italian translations for PACKAGE package.
+# Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#  <christophe.alexandre@pm.me>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-09 17:55+0000\n"
+"PO-Revision-Date: 2024-09-09 17:57+0000\n"
+"Last-Translator:  <christophe.alexandre@pm.me>\n"
+"Language-Team: Italian <tp@lists.linux.it>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/runbot.py:33
+msgid "Welcome to our virtual legal assistant."
+msgstr "Benvenuto nel nostro assistente legale virtuale."
+
+#: src/runbot.py:36
+msgid ""
+"Please briefly describe your legal situation below."
+msgstr "Si prega di descrivere brevemente la sua situazione o domanda legale qui sotto."
+
+#: src/runbot.py:40
+msgid ""
+"Our system will analyze your case and provide you with "
+"relevant references to applicable legal texts."
+msgstr ""
+"Il nostro sistema analizzerà il suo caso e le fornirà"
+"riferimenti pertinenti ai testi di legge applicabili."
+
+#: src/runbot.py:48
+msgid "Please add your Mistral API key to continue."
+msgstr "Please add your Mistral API key to continue."
+
+#: src/runbot.py:66
+msgid "Please briefly describe your situation..."
+msgstr "Si prega di descrivere brevemente la sua situazione..."
+
+#: src/runbot.py:67
+msgid "Send"
+msgstr "Invia"
