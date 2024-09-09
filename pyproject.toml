@@ -5,6 +5,7 @@ description = "Swiss Legal Assistant Bot"
 authors = ["Christophe Alexandre <christophe.alexandre@pm.me>"]
 readme = "README.md"
 packages = [
+    {include = "**/*.py", from="src"},
     {include = "**/*.py", from="scripts"}
 ]
 
@@ -18,4 +19,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-streamlit-app = "scripts.streamlit_app:main"
+streamlit-app = "scripts.app:run_script"
