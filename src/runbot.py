@@ -47,7 +47,7 @@ def start():
                 model="mistral-nemo-12b",
                 messages=[
                     {"role": m["role"], "content": m["content"]}
-                    for m in st.session_state.messages
+                    for m in streamlit.session_state.messages
                 ],
                 stream=True,
             ) """
