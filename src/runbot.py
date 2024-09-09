@@ -2,10 +2,21 @@
 import os
 import streamlit
 import gettext
+import base64
 
 from mistralai import Mistral, SystemMessage, UserMessage
 
 from helpers import string_to_stream
+
+
+def render_svg(svg_file: str) -> str:
+    with open(svg_file, "r") as f:
+        svg_content = f.read()
+    
+    b64 = base64.b64encode(svg_content.encode("utf-8")).decode("utf-8")
+    html = f'<img src="data:image/svg+xml;base64,{b64}" alt="Revault sàrl logo">'
+    
+    return html
 
 
 def load_translations(lang):
@@ -55,7 +66,7 @@ def start():
 
     # In the first (narrower) column, place your selectbox
     with col1:
-         streamlit.write(" ")
+        streamlit.image("resources/img/logo-revault-transp.png", width=200) 
 
     # In the second (wider) column, place your other content
     with col2:        
