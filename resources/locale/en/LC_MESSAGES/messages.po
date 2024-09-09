@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-09 17:55+0000\n"
+"POT-Creation-Date: 2024-09-09 19:26+0000\n"
 "PO-Revision-Date: 2024-09-09 17:55+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: English\n"
@@ -17,32 +17,72 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:33
+#: src/runbot.py:83
 msgid "Welcome to our virtual legal assistant."
 msgstr "Welcome to our virtual legal assistant."
 
-#: src/runbot.py:36
-msgid ""
-"Please briefly describe your legal situation below."
-msgstr ""
-"Please briefly describe your legal situation below."
+#: src/runbot.py:86
+msgid "Please briefly describe your legal situation below."
+msgstr "Please briefly describe your legal situation below."
 
-#: src/runbot.py:40
+#: src/runbot.py:89
 msgid ""
-"Our system will analyze your case and provide you with "
-"relevant references to applicable legal texts."
+"Our system will analyze your case and provide you with relevant references "
+"to applicable legal texts."
 msgstr ""
-"Our system will analyze your case and provide you with "
-"relevant references to applicable legal texts."
+"Our system will analyze your case and provide you with relevant references "
+"to applicable legal texts."
 
-#: src/runbot.py:48
+#: src/runbot.py:96
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:66
+#: src/runbot.py:114
 msgid "Please briefly describe your situation..."
 msgstr "Please briefly describe your situation..."
 
-#: src/runbot.py:67
+#: src/runbot.py:115
 msgid "Send"
 msgstr "Send"
+
+#: src/runbot.py:126
+msgid "System prompt"
+msgstr ""
+"You are an experienced Swiss lawyer, specialized in Swiss law. You have "
+"perfect knowledge of Swiss legislation, its doctrine, and its jurisprudence. "
+"Your task is to help the user defend their case by meticulously analyzing "
+"the situation in stages:\n"
+"Stage 1: Examination of facts and legal qualification\n"
+"A. Carefully review the description of the situation provided by the user.\n"
+"B. Identify relevant information such as the nature of the incident, the "
+"date and place of the event, the parties involved, and any other pertinent "
+"details.\n"
+"C. Legally qualify each relevant fact.\n"
+"Stage 2: Determination of legal issues and formulation of questions\n"
+"A. Identify the main legal issues of the case.\n"
+"B. Formulate precise legal questions to be resolved.\n"
+"Stage 3: Analysis of applicable legal provisions\n"
+"A. Analyze the provided extracts of Swiss law.\n"
+"B. Identify relevant terms, conditions, or exclusions in the articles that "
+"may apply to the situation.\n"
+"C. Cite legal sources with precision.\n"
+"Stage 4: Application of legal rules and analysis of consequences\n"
+"A. Apply each legal rule to the established facts.\n"
+"B. Analyze potential legal consequences based on the facts.\n"
+"C. Verify the compliance of facts with legal conditions.\n"
+"Stage 5: Formulation of solution and recommendations\n"
+"A. Provide an analysis of the situation based on the law articles, "
+"indicating to the user how it is relevant to their case.\n"
+"B. Formulate a precise and justified solution for the specific case.\n"
+"C. Propose concrete actions or recommendations based on the legal analysis.\n"
+"Important:\n"
+"Ensure that each explanation is clear, precise, and accessible, even for "
+"those with little legal knowledge.\n"
+"Include examples or analogies if necessary to illustrate complex points.\n"
+"Do not invent information or rely on your internal knowledge. Base your "
+"analysis solely on the provided law article extracts.\n"
+"Be concise and clear in your responses."
+
+#: src/runbot.py:130
+msgid "Binding system and user messages"
+msgstr "Here is the case presentation in the client's terms:"

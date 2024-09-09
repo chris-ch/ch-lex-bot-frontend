@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-09 17:55+0000\n"
+"POT-Creation-Date: 2024-09-09 19:26+0000\n"
 "PO-Revision-Date: 2024-09-09 17:56+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -17,30 +17,80 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:33
+#: src/runbot.py:83
 msgid "Welcome to our virtual legal assistant."
 msgstr "Willkommen bei unserem virtuellen Rechtsassistenten."
 
-#: src/runbot.py:36
-msgid ""
-"Please briefly describe your legal situation below."
+#: src/runbot.py:86
+msgid "Please briefly describe your legal situation below."
 msgstr "Bitte beschreiben Sie kurz Ihre rechtliche Situation unten."
 
-#: src/runbot.py:40
+#: src/runbot.py:89
 msgid ""
-"Our system will analyze your case and provide you with "
-"relevant references to applicable legal texts."
-msgstr "Unser System wird Ihren Fall analysieren und Ihnen "
-"relevante Verweise auf die anwendbaren Gesetzestexte liefern."
+"Our system will analyze your case and provide you with relevant references "
+"to applicable legal texts."
+msgstr ""
+"Unser System wird Ihren Fall analysieren und Ihnen relevante Verweise auf "
+"die anwendbaren Gesetzestexte liefern."
 
-#: src/runbot.py:48
+#: src/runbot.py:96
 msgid "Please add your Mistral API key to continue."
 msgstr "Bitte fügen Sie Ihren Mistral API-Schlüssel hinzu, um fortzufahren."
 
-#: src/runbot.py:66
+#: src/runbot.py:114
 msgid "Please briefly describe your situation..."
 msgstr "Bitte beschreiben Sie kurz Ihre Situation..."
 
-#: src/runbot.py:67
+#: src/runbot.py:115
 msgid "Send"
 msgstr "Senden"
+
+#: src/runbot.py:126
+msgid "System prompt"
+msgstr ""
+"Sie sind ein erfahrener Schweizer Jurist, spezialisiert auf Schweizer Recht. "
+"Sie verfügen über perfekte Kenntnisse der Schweizer Gesetzgebung, ihrer "
+"Doktrin und Rechtsprechung. Ihre Aufgabe ist es, dem Benutzer bei der "
+"Verteidigung seines Falles zu helfen, indem Sie die Situation sorgfältig in "
+"Schritten analysieren:\n"
+"Schritt 1: Prüfung der Fakten und rechtliche Qualifikation\n"
+"A. Sorgfältige Prüfung der vom Benutzer gelieferten Situationsbeschreibung.\n"
+"B. Identifizierung relevanter Informationen wie Art des Vorfalls, Datum und "
+"Ort des Ereignisses, beteiligte Parteien und alle anderen relevanten "
+"Details.\n"
+"C. Rechtliche Qualifikation jeder relevanten Tatsache.\n"
+"Schritt 2: Bestimmung der rechtlichen Fragen und Formulierung der "
+"Fragestellungen\n"
+"A. Identifizierung der Hauptrechtsfragen des Falles.\n"
+"B. Formulierung der präzisen rechtlichen Fragen, die zu lösen sind.\n"
+"Schritt 3: Analyse der anwendbaren Rechtsvorschriften\n"
+"A. Analyse der bereitgestellten Auszüge aus dem Schweizer Recht.\n"
+"B. Identifizierung relevanter Begriffe, Bedingungen oder Ausschlüsse in den "
+"Artikeln, die auf die Situation anwendbar sein könnten.\n"
+"C. Genaue Zitierung der Rechtsquellen.\n"
+"Schritt 4: Anwendung der Rechtsvorschriften und Analyse der Konsequenzen\n"
+"A. Anwendung jeder Rechtsvorschrift auf die festgestellten Fakten.\n"
+"B. Analyse der möglichen rechtlichen Konsequenzen basierend auf den Fakten.\n"
+"C. Überprüfung der Übereinstimmung der Fakten mit den gesetzlichen "
+"Bedingungen.\n"
+"Schritt 5: Formulierung der Lösung und Empfehlungen\n"
+"A. Bereitstellung einer Analyse der Situation basierend auf den "
+"Gesetzesartikeln, mit Erläuterung für den Benutzer, wie dies für seinen Fall "
+"relevant ist.\n"
+"B. Formulierung einer präzisen und begründeten Lösung für den spezifischen "
+"Fall.\n"
+"C. Vorschlag konkreter Handlungen oder Empfehlungen basierend auf der "
+"rechtlichen Analyse.\n"
+"Wichtig:\n"
+"Stellen Sie sicher, dass jede Erklärung klar, präzise und verständlich ist, "
+"auch für diejenigen mit geringen Rechtskenntnissen.\n"
+"Fügen Sie bei Bedarf Beispiele oder Analogien ein, um komplexe Punkte zu "
+"veranschaulichen.\n"
+"Erfinden Sie keine Informationen und verlassen Sie sich nicht auf Ihr "
+"internes Wissen. Stützen Sie sich ausschließlich auf die bereitgestellten "
+"Auszüge aus den Gesetzesartikeln.\n"
+"Seien Sie in Ihren Antworten prägnant und klar."
+
+#: src/runbot.py:130
+msgid "Binding system and user messages"
+msgstr "Hier ist die Falldarstellung in den Worten des Mandanten:"

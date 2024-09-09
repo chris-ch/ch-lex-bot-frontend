@@ -122,18 +122,18 @@ def start():
                 with streamlit.chat_message("user"):
                     streamlit.markdown(user_description)
 
-                # Generate a response using the OpenAI API.
-                system_message = SystemMessage(content="")
+                # Generate a response using the Mistral API.
+                system_message = SystemMessage(content=_("System prompt") + "\n\n" + _("Binding system and user messages") + "\n")
                 user_message = UserMessage(content=user_description)
                 response = client_llm.chat.complete(
-                    model="mistral-large-latest",
+                    model="open-mistral-nemo-2407",
                     messages=[system_message, user_message],
                     max_tokens=None,
                     temperature=0.,
                     )
                 answer = response.choices[0].message.content
                 _ = """ stream = client.chat.completions.create(
-                    model="mistral-nemo-12b",
+                    model="open-mistral-nemo-2407",
                     messages=[
                         {"role": m["role"], "content": m["content"]}
                         for m in streamlit.session_state.messages
@@ -147,3 +147,4 @@ def start():
                 with streamlit.chat_message("assistant"):
                     response = streamlit.write_stream(stream)
                 streamlit.session_state.messages.append({"role": "assistant", "content": response})
+                

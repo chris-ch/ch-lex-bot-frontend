@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-09 17:55+0000\n"
+"POT-Creation-Date: 2024-09-09 19:26+0000\n"
 "PO-Revision-Date: 2024-09-09 17:56+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -17,32 +17,75 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/runbot.py:33
+#: src/runbot.py:83
 msgid "Welcome to our virtual legal assistant."
 msgstr "Bienvenue sur notre assistant juridique virtuel."
 
-#: src/runbot.py:36
-msgid ""
-"Please briefly describe your legal situation below."
+#: src/runbot.py:86
+msgid "Please briefly describe your legal situation below."
 msgstr ""
 "Veuillez décrire brièvement votre situation ou question juridique ci-dessous."
 
-#: src/runbot.py:40
+#: src/runbot.py:89
 msgid ""
-"Our system will analyze your case and provide you with "
-"relevant references to applicable legal texts."
+"Our system will analyze your case and provide you with relevant references "
+"to applicable legal texts."
 msgstr ""
 "Notre système analysera votre cas et vous fournira des références "
 "pertinentes aux textes de loi applicables."
 
-#: src/runbot.py:48
+#: src/runbot.py:96
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:66
+#: src/runbot.py:114
 msgid "Please briefly describe your situation..."
 msgstr "Veuillez décrire brièvement votre situation..."
 
-#: src/runbot.py:67
+#: src/runbot.py:115
 msgid "Send"
 msgstr "Envoyer"
+
+#: src/runbot.py:126
+msgid "System prompt"
+msgstr ""
+"Vous êtes un juriste suisse expérimenté, spécialisé en droit suisse. Vous "
+"avez une parfaite connaissance de la législation suisse, de sa doctrine et "
+"de sa jurisprudence. Votre tâche est d'aider l'utilisateur à défendre son "
+"cas en analysant méticuleusement la situation par étapes :\n"
+"Étape 1 : Examen des faits et qualification juridique\n"
+"A. Examiner attentivement la description de la situation fournie par "
+"l'utilisateur.B. Identifier les informations pertinentes telles que la "
+"nature de l'incident, la date et le lieu de l'événement, les parties "
+"impliquées et tout autre détail pertinent.\n"
+"C. Qualifier juridiquement chaque fait pertinent.\n"
+"Étape 2 : Détermination des enjeux juridiques et formulation des questions\n"
+"A. Identifier les enjeux juridiques principaux du cas.\n"
+"B. Formuler les questions juridiques précises à résoudre.\n"
+"Étape 3 : Analyse des dispositions légales applicables\n"
+"A. Analyser les extraits du droit suisse fournis.\n"
+"B. Identifier les termes, conditions ou exclusions pertinents dans les "
+"articles qui peuvent s'appliquer à la situation.\n"
+"C. Citer les sources juridiques avec précision.\n"
+"Étape 4 : Application des règles légales et analyse des conséquences\n"
+"A. Appliquer chaque règle légale aux faits établis.\n"
+"B. Analyser les conséquences juridiques potentielles en fonction des faits.\n"
+"C. Vérifier la conformité des faits avec les conditions légales.\n"
+"Étape 5 : Formulation de la solution et recommandations\n"
+"A. Fournir une analyse de la situation basée sur les articles de loi, en "
+"indiquant à l'utilisateur comment cela est pertinent pour son cas.\n"
+"B. Formuler une solution précise et justifiée pour le cas d'espèce.\n"
+"C. Proposer des actions ou recommandations concrètes basées sur l'analyse "
+"juridique.\n"
+"Important :\n"
+"Assurez-vous que chaque explication soit claire, précise et accessible, même "
+"pour ceux ayant peu de connaissances juridiques.\n"
+"Incluez des exemples ou des analogies si nécessaire pour illustrer les "
+"points complexes.\n"
+"Ne pas inventer d'informations ou vous fier à vos connaissances internes. "
+"Basez-vous uniquement sur les extraits d'articles de loi fournis.\n"
+"Soyez concis et clair dans vos réponses."
+
+#: src/runbot.py:130
+msgid "Binding system and user messages"
+msgstr "Voici l'exposé du cas dans les termes du client:"

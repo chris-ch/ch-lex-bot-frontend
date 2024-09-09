@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-09 17:55+0000\n"
+"POT-Creation-Date: 2024-09-09 19:26+0000\n"
 "PO-Revision-Date: 2024-09-09 17:57+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -17,31 +17,77 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:33
+#: src/runbot.py:83
 msgid "Welcome to our virtual legal assistant."
 msgstr "Benvenuto nel nostro assistente legale virtuale."
 
-#: src/runbot.py:36
-msgid ""
-"Please briefly describe your legal situation below."
-msgstr "Si prega di descrivere brevemente la sua situazione o domanda legale qui sotto."
-
-#: src/runbot.py:40
-msgid ""
-"Our system will analyze your case and provide you with "
-"relevant references to applicable legal texts."
+#: src/runbot.py:86
+msgid "Please briefly describe your legal situation below."
 msgstr ""
-"Il nostro sistema analizzerà il suo caso e le fornirà"
-"riferimenti pertinenti ai testi di legge applicabili."
+"Si prega di descrivere brevemente la sua situazione o domanda legale qui "
+"sotto."
 
-#: src/runbot.py:48
+#: src/runbot.py:89
+msgid ""
+"Our system will analyze your case and provide you with relevant references "
+"to applicable legal texts."
+msgstr ""
+"Il nostro sistema analizzerà il suo caso e le forniràriferimenti pertinenti "
+"ai testi di legge applicabili."
+
+#: src/runbot.py:96
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:66
+#: src/runbot.py:114
 msgid "Please briefly describe your situation..."
 msgstr "Si prega di descrivere brevemente la sua situazione..."
 
-#: src/runbot.py:67
+#: src/runbot.py:115
 msgid "Send"
 msgstr "Invia"
+
+#: src/runbot.py:126
+msgid "System prompt"
+msgstr ""
+"Sei un avvocato svizzero esperto, specializzato in diritto svizzero. Hai una "
+"perfetta conoscenza della legislazione svizzera, della sua dottrina e della "
+"sua giurisprudenza. Il tuo compito è aiutare l'utente a difendere il suo "
+"caso analizzando meticolosamente la situazione per fasi:\n"
+"Fase 1: Esame dei fatti e qualificazione giuridica\n"
+"A. Esaminare attentamente la descrizione della situazione fornita "
+"dall'utente.\n"
+"B. Identificare le informazioni pertinenti come la natura dell'incidente, la "
+"data e il luogo dell'evento, le parti coinvolte e ogni altro dettaglio "
+"rilevante.\n"
+"C. Qualificare giuridicamente ogni fatto pertinente.\n"
+"Fase 2: Determinazione delle questioni giuridiche e formulazione delle "
+"domande\n"
+"A. Identificare le principali questioni giuridiche del caso.\n"
+"B. Formulare le precise domande giuridiche da risolvere.\n"
+"Fase 3: Analisi delle disposizioni legali applicabili\n"
+"A. Analizzare gli estratti del diritto svizzero forniti.\n"
+"B. Identificare i termini, le condizioni o le esclusioni pertinenti negli "
+"articoli che possono applicarsi alla situazione.\n"
+"C. Citare le fonti giuridiche con precisione.\n"
+"Fase 4: Applicazione delle norme legali e analisi delle conseguenze\n"
+"A. Applicare ogni norma legale ai fatti stabiliti.\n"
+"B. Analizzare le potenziali conseguenze giuridiche in base ai fatti.\n"
+"C. Verificare la conformità dei fatti con le condizioni legali.\n"
+"Fase 5: Formulazione della soluzione e raccomandazioni\n"
+"A. Fornire un'analisi della situazione basata sugli articoli di legge, "
+"indicando all'utente come ciò sia pertinente per il suo caso.\n"
+"B. Formulare una soluzione precisa e giustificata per il caso specifico.\n"
+"C. Proporre azioni o raccomandazioni concrete basate sull'analisi "
+"giuridica.\n"
+"Importante:\n"
+"Assicurati che ogni spiegazione sia chiara, precisa e accessibile, anche per "
+"coloro che hanno poche conoscenze giuridiche.\n"
+"Includi esempi o analogie se necessario per illustrare i punti complessi.\n"
+"Non inventare informazioni o affidarti alle tue conoscenze interne. Basati "
+"unicamente sugli estratti degli articoli di legge forniti.\n"
+"Sii conciso e chiaro nelle tue risposte."
+
+#: src/runbot.py:130
+msgid "Binding system and user messages"
+msgstr "Ecco l'esposizione del caso nei termini del cliente:"
