@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "ch-lex-bot"
+version = "0.1.0"
+description = "Swiss Legal Assistant Bot"
+authors = ["Christophe Alexandre <christophe.alexandre@pm.me>"]
+readme = "README.md"
+packages = [
+    {include = "**/*.py", from="scripts"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.38.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+streamlit-app = "scripts.streamlit_app:main"

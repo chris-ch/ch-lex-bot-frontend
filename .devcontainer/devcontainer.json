@@ -17,7 +17,7 @@
       ]
     }
   },
-  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; pipx ensurepath; pipx install poetry; [ ! -f poetry.toml ] && poetry init --no-interaction --name "ch-lex-bot" --description "Swiss Legal Assistant Bot" --author "Christophe Alexandre <christophe.alexandre@pm.me>" --python "^3.12"; poetry update; echo '✅ Packages installed and Requirements met'",
+  "updateContentCommand": "[ -f packages.txt ] && sudo apt update && sudo apt upgrade -y && sudo xargs apt install -y <packages.txt; pipx ensurepath; pipx install poetry; poetry update; echo '✅ Packages installed and Requirements met'",
   "postAttachCommand": {
     "server": "streamlit run streamlit_app.py --server.enableCORS false --server.enableXsrfProtection false"
   },
