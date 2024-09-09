@@ -109,18 +109,22 @@ def start():
             with streamlit.chat_message(message["role"]):
                 streamlit.markdown(message["content"])
 
-        # Create a chat text area to allow the user to enter a message. This will display
-        # automatically at the bottom of the page.
-        user_description = streamlit.text_area(_("Please briefly describe your situation..."), height=150)
-        submit_button = streamlit.button(_("Send"))
+        # Create a chat text area to allow the user to enter a message.
+        # This will display automatically at the bottom of the page.
+        user_input = streamlit.empty()
+        with user_input.container():
+            user_description = streamlit.text_area(_("Please briefly describe your situation..."), height=150)
+            submit_button = streamlit.button(_("Send"))
+
         if submit_button or streamlit.session_state.user_description != streamlit.session_state.get('user_description', ''):
-            if user_description:                
+            if user_description:
                 streamlit.session_state['user_description'] = user_description
                 streamlit.session_state.previous_user_description = streamlit.session_state.user_description
-                
                 streamlit.session_state.messages.append({"role": "user", "content": user_description})
                 with streamlit.chat_message("user"):
                     streamlit.markdown(user_description)
+
+                user_input.empty()
 
                 # Generate a response using the Mistral API.
                 system_message = SystemMessage(content=_("System prompt") + "\n\n" + _("Binding system and user messages") + "\n")
@@ -132,14 +136,6 @@ def start():
                     temperature=0.,
                     )
                 answer = response.choices[0].message.content
-                _ = """ stream = client.chat.completions.create(
-                    model="open-mistral-nemo-2407",
-                    messages=[
-                        {"role": m["role"], "content": m["content"]}
-                        for m in streamlit.session_state.messages
-                    ],
-                    stream=True,
-                ) """
                 stream = string_to_stream(answer)
 
                 # Stream the response to the chat using `streamlit.write_stream`, then store it in 
