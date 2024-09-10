@@ -19,7 +19,7 @@ Run the app
 Creating `messages.pot` file
 
 ```bash
-xgettext -o resources/messages.pot src/runbot.py
+xgettext -o resources/messages.pot src/*.py
 ```
 
 Merging 

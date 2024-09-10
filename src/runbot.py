@@ -1,12 +1,12 @@
 
 import os
 import streamlit
-import gettext
 import base64
 
 from mistralai import Mistral, SystemMessage, UserMessage
 
-from helpers import string_to_stream
+import helpers
+import i18n
 
 
 def render_svg(svg_file: str) -> str:
@@ -19,16 +19,10 @@ def render_svg(svg_file: str) -> str:
     return html
 
 
-def load_translations(lang):
-    localedir = os.path.abspath(os.path.join(os.path.curdir, 'resources', 'locale'))
-    if not os.path.exists(localedir):
-        raise BaseException(f"Locale folder not found: {localedir}")
-    translate = gettext.translation('messages', localedir, languages=[lang])
-    translate.install()
-    return translate.gettext
-
-
 def start():
+    
+    helpers.setup_logging_levels()
+    
     # Initialize session state
     if "language" not in streamlit.session_state:
         streamlit.session_state.language = "en"
@@ -86,7 +80,7 @@ def start():
         streamlit.session_state.language = language_options[selected_flag]
         streamlit.rerun()
         
-    _ = load_translations(streamlit.session_state.language)
+    _ = i18n.load_translations(streamlit.session_state.language)
     
     # Show title and description.
     streamlit.title("💬 Lex Bot 🇨🇭")
@@ -118,7 +112,7 @@ def start():
         # Display the existing chat messages via `streamlit.chat_message`.
         for message in streamlit.session_state.messages:
             with streamlit.chat_message(message["role"]):
-                streamlit.markdown(message["content"])
+                streamlit.markdown(message["content"], unsafe_allow_html=True)
 
         # Create a chat text area to allow the user to enter a message.
         # This will display automatically at the bottom of the page.
@@ -138,7 +132,8 @@ def start():
                 user_input.empty()
 
                 # Generate a response using the Mistral API.
-                system_message = SystemMessage(content=_("System prompt") + "\n\n" + _("Binding system and user messages") + "\n")
+                system_prompt_quality_check = _("SYSTEM_PROMPT_QUALITY_CHECK")
+                system_message = SystemMessage(content=system_prompt_quality_check + "\n")
                 user_message = UserMessage(content=user_description)
                 response = client_llm.chat.complete(
                     model="open-mistral-nemo-2407",
@@ -147,11 +142,21 @@ def start():
                     temperature=0.,
                     )
                 answer = response.choices[0].message.content
-                stream = string_to_stream(answer)
-
+                stream = helpers.string_to_stream(answer)
                 # Stream the response to the chat using `streamlit.write_stream`, then store it in 
                 # session state.
                 with streamlit.chat_message("assistant"):
-                    response = streamlit.write_stream(stream)
-                streamlit.session_state.messages.append({"role": "assistant", "content": response})
+                    placeholder = streamlit.empty()
+                    full_response = ""
+                    
+                    for chunk in stream:
+                        full_response += chunk
+                        placeholder.markdown(full_response, unsafe_allow_html=True)
+                    
+                    #placeholder.markdown(f"```markdown\n{full_response}\n```")
+                    #response = streamlit.write_stream(stream)
+
+                streamlit.session_state.messages.append({"role": "assistant", "content": answer})
+                
+                streamlit.rerun()
                 
