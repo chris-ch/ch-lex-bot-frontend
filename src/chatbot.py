@@ -38,7 +38,7 @@ def start():
     col1, col2 = streamlit.columns([7, 1])  # Adjust the ratio as needed
 
     with col1:
-        streamlit.image("resources/img/logo-revault-transp.png", width=200) 
+        streamlit.image("resources/img/logo-revault.svg", width=200) 
 
     with col2:
         current_language = streamlit.session_state.language
