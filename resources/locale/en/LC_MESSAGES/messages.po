@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-10 20:40+0000\n"
+"POT-Creation-Date: 2024-09-11 09:24+0000\n"
 "PO-Revision-Date: 2024-09-09 17:55+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: English\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:97
+#: src/chatbot.py:106
 msgid "Welcome to our virtual legal assistant."
 msgstr "Welcome to our virtual legal assistant."
 
-#: src/runbot.py:100
+#: src/chatbot.py:109
 msgid "Please briefly describe your legal situation below."
 msgstr "Please briefly describe your legal situation below."
 
-#: src/runbot.py:103
+#: src/chatbot.py:112
 msgid ""
 "Our system will analyze your case and provide you with relevant references "
 "to applicable legal texts."
@@ -33,42 +33,52 @@ msgstr ""
 "Our system will analyze your case and provide you with relevant references "
 "to applicable legal texts."
 
-#: src/runbot.py:110
+#: src/chatbot.py:117
+msgid ""
+"The system is now analysing the case based on relevant legal references."
+msgstr ""
+
+#: src/chatbot.py:124
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:130
-msgid "Please briefly describe your situation..."
-msgstr "Please briefly describe your situation..."
+#: src/chatbot.py:145
+msgid "Case description..."
+msgstr "Case description..."
 
-#: src/runbot.py:131
+#: src/chatbot.py:150
 msgid "Send"
 msgstr "Send"
 
-#: src/runbot.py:144
+#: src/chatbot.py:154
+msgid "More Suggestions"
+msgstr ""
+
+#: src/chatbot.py:157
+msgid "Move Forward"
+msgstr "Move Forward"
+
+#: src/chatbot.py:183
 msgid "SYSTEM_PROMPT_QUALITY_CHECK"
 msgstr ""
-"You are a legal assistant specialized in Swiss law. Your task is to evaluate the user's input and determine if they have provided sufficient information about their legal situation. Consider the following aspects when assessing the user's description:\n"
-"\n"
-"1. Context: Has the user provided a clear overview of their legal issue?\n"
-"2. Parties involved: Are all relevant parties (individuals, companies, institutions) mentioned?\n"
-"3. Timeline: Is there a clear sequence of events or timeframe for the situation?\n"
-"4. Location: Is it clear where the legal issue is taking place within Switzerland?\n"
-"5. Specific legal area: Can you identify the area of law involved (e.g., civil, criminal, administrative, family law)?\n"
-"6. Key facts: Are there enough specific details to understand the core of the problem?\n"
-"7. User's goal: Is it clear what the user is trying to achieve or what questions they have?\n"
-"\n"
-"Based on the user's input, provide a brief assessment of whether there is sufficient information to proceed with a meaningful legal discussion. If important details are missing, specify what additional information would be helpful.\n"
-"\n"
-"Your response should be structured as follows:\n"
-"1. A yes/no statement on whether there's enough information.\n"
-"2. A brief explanation of your assessment (2-3 sentences).\n"
-"3. If applicable, a bullet-point list of additional details needed.\n"
-"\n"
-"Remember, your goal is to ensure you have enough context to provide accurate and helpful legal information specific to Swiss law.\n"
-"\n"
-"The user input is below:"
-
+"You are a legal assistant specializing in Swiss law, tasked with helping the "
+"user draft information about a third party's legal situation. Analyze the "
+"description provided by the user and structure a concise response in three "
+"parts, without using headers or numbering:\n"
+" - Briefly rephrase the key elements of the described situation.\n"
+" - If necessary, suggest additional information in a general and "
+"hypothetical manner, using the conditional tense. Check if the context, "
+"involved parties, timeline, and location in Switzerland are mentioned. Avoid "
+"overly specific suggestions or requests for detailed information.\n"
+" - Remind the user that they can add information or move to the next step "
+"via the interface.\n"
+"Important instructions:\n"
+" - Do not ask any direct questions.\n"
+" - Avoid specific legal advice.\n"
+" - Remain neutral and factual.\n"
+" - Focus on relevant aspects of the case.\n"
+" - Formulate your response concisely and informally.\n"
+"The user's description is below:"
 
 #~ msgid "System prompt"
 #~ msgstr ""

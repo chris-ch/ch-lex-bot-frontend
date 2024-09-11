@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-10 20:40+0000\n"
+"POT-Creation-Date: 2024-09-11 09:24+0000\n"
 "PO-Revision-Date: 2024-09-09 17:57+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:97
+#: src/chatbot.py:106
 msgid "Welcome to our virtual legal assistant."
 msgstr "Benvenuto nel nostro assistente legale virtuale."
 
-#: src/runbot.py:100
+#: src/chatbot.py:109
 msgid "Please briefly describe your legal situation below."
 msgstr ""
 "Si prega di descrivere brevemente la sua situazione o domanda legale qui "
 "sotto."
 
-#: src/runbot.py:103
+#: src/chatbot.py:112
 msgid ""
 "Our system will analyze your case and provide you with relevant references "
 "to applicable legal texts."
@@ -35,42 +35,52 @@ msgstr ""
 "Il nostro sistema analizzerà il suo caso e le forniràriferimenti pertinenti "
 "ai testi di legge applicabili."
 
-#: src/runbot.py:110
+#: src/chatbot.py:117
+msgid ""
+"The system is now analysing the case based on relevant legal references."
+msgstr ""
+
+#: src/chatbot.py:124
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:130
-msgid "Please briefly describe your situation..."
-msgstr "Si prega di descrivere brevemente la sua situazione..."
+#: src/chatbot.py:145
+msgid "Case description..."
+msgstr "Descrizione del caso..."
 
-#: src/runbot.py:131
+#: src/chatbot.py:150
 msgid "Send"
 msgstr "Invia"
 
-#: src/runbot.py:144
+#: src/chatbot.py:154
+msgid "More Suggestions"
+msgstr "Aggiornare la descrizione"
+
+#: src/chatbot.py:157
+msgid "Move Forward"
+msgstr "Proseguire al prossimo passo"
+
+#: src/chatbot.py:183
 msgid "SYSTEM_PROMPT_QUALITY_CHECK"
 msgstr ""
-"Sei un assistente legale specializzato nel diritto svizzero. Il tuo compito è valutare l'input dell'utente e determinare se ha fornito informazioni sufficienti sulla sua situazione legale. Considera i seguenti aspetti quando valuti la descrizione dell'utente:\n"
-"\n"
-"1. Contesto: L'utente ha fornito una chiara panoramica del suo problema legale?\n"
-"2. Parti coinvolte: Sono menzionate tutte le parti rilevanti (individui, aziende, istituzioni)?\n"
-"3. Cronologia: C'è una chiara sequenza di eventi o un arco temporale per la situazione?\n"
-"4. Luogo: È chiaro dove si sta verificando il problema legale all'interno della Svizzera?\n"
-"5. Area legale specifica: Puoi identificare l'area del diritto coinvolta (ad esempio, civile, penale, amministrativo, diritto di famiglia)?\n"
-"6. Fatti chiave: Ci sono abbastanza dettagli specifici per comprendere il nucleo del problema?\n"
-"7. Obiettivo dell'utente: È chiaro cosa l'utente sta cercando di ottenere o quali domande ha?\n"
-"\n"
-"Basandoti sull'input dell'utente, fornisci una breve valutazione se ci sono informazioni sufficienti per procedere con una discussione legale significativa. Se mancano dettagli importanti, specifica quali informazioni aggiuntive sarebbero utili.\n"
-"\n"
-"La tua risposta dovrebbe essere strutturata come segue:\n"
-"1. Una dichiarazione sì/no sulla sufficienza delle informazioni.\n"
-"2. Una breve spiegazione della tua valutazione (2-3 frasi).\n"
-"3. Se applicabile, un elenco puntato dei dettagli aggiuntivi necessari.\n"
-"\n"
-"Ricorda, il tuo obiettivo è assicurarti di avere abbastanza contesto per fornire informazioni legali accurate e utili specifiche per il diritto svizzero.\n"
-"\n"
-"L'input dell'utente è riportato di seguito:"
-
+"Sei un assistente legale specializzato in diritto svizzero, incaricato di "
+"aiutare l'utente a redigere informazioni sulla situazione legale di terzi. "
+"Analizza la descrizione fornita dall'utente e struttura una risposta concisa "
+"in tre parti, senza utilizzare intestazioni o numerazione:\n"
+" - Riformula brevemente gli elementi chiave della situazione descritta.\n"
+" - Se necessario, suggerisci informazioni aggiuntive in modo generale e "
+"ipotetico, usando il condizionale. Verifica se sono menzionati il contesto, "
+"le parti coinvolte, la cronologia e la localizzazione in Svizzera. Evita "
+"suggerimenti troppo specifici o richieste di dettagli particolari.\n"
+" - Ricorda all'utente che può aggiungere informazioni o passare alla fase "
+"successiva tramite l'interfaccia.\n"
+"Istruzioni importanti:\n"
+" - Non porre domande dirette.\n"
+" - Evita consigli legali specifici.\n"
+" - Rimani neutrale e fattuale.\n"
+" - Concentrati sugli aspetti rilevanti del caso.\n"
+" - Formula la tua risposta in modo conciso e informale.\n"
+"La descrizione dell'utente si trova di seguito :"
 
 #~ msgid "System prompt"
 #~ msgstr ""

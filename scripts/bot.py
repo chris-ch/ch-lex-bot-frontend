@@ -1,4 +1,4 @@
-import runbot
+import chatbot
 
 if __name__ == "__main__":
-    runbot.start()
+    chatbot.start()

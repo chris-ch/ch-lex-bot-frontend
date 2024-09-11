@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-10 20:40+0000\n"
+"POT-Creation-Date: 2024-09-11 09:24+0000\n"
 "PO-Revision-Date: 2024-09-09 17:56+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: French <traduc@traduc.org>\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/runbot.py:97
+#: src/chatbot.py:106
 msgid "Welcome to our virtual legal assistant."
 msgstr "Bienvenue sur notre assistant juridique virtuel."
 
-#: src/runbot.py:100
+#: src/chatbot.py:109
 msgid "Please briefly describe your legal situation below."
 msgstr ""
 "Veuillez décrire brièvement votre situation ou question juridique ci-dessous."
 
-#: src/runbot.py:103
+#: src/chatbot.py:112
 msgid ""
 "Our system will analyze your case and provide you with relevant references "
 "to applicable legal texts."
@@ -34,42 +34,54 @@ msgstr ""
 "Notre système analysera votre cas et vous fournira des références "
 "pertinentes aux textes de loi applicables."
 
-#: src/runbot.py:110
+#: src/chatbot.py:117
+msgid ""
+"The system is now analysing the case based on relevant legal references."
+msgstr ""
+
+#: src/chatbot.py:124
 msgid "Please add your Mistral API key to continue."
 msgstr "Please add your Mistral API key to continue."
 
-#: src/runbot.py:130
-msgid "Please briefly describe your situation..."
-msgstr "Veuillez décrire brièvement votre situation..."
+#: src/chatbot.py:145
+msgid "Case description..."
+msgstr "Description du cas..."
 
-#: src/runbot.py:131
+#: src/chatbot.py:150
 msgid "Send"
 msgstr "Envoyer"
 
-#: src/runbot.py:144
+#: src/chatbot.py:154
+msgid "More Suggestions"
+msgstr "Mettre à jour la description"
+
+#: src/chatbot.py:157
+msgid "Move Forward"
+msgstr "Passer à l'étape suivante"
+
+#: src/chatbot.py:183
 msgid "SYSTEM_PROMPT_QUALITY_CHECK"
 msgstr ""
-"Vous êtes un assistant juridique spécialisé dans le droit suisse. Votre tâche est d'aider l'utilisateur à rédiger "
-"les informations concernant la situation juridique d'un tiers. Considérez les aspects suivants :\n"
-"1. Contexte général du problème\n"
-"2. Parties impliquées\n"
-"3. Chronologie des événements\n"
-"4. Localisation en Suisse (canton, commune)\n"
-"5. Domaine juridique concerné\n"
-"6. Faits clés spécifiques au problème\n"
-"Sans mentionner explicitement ces critères, si nécessaire, suggérez délicatement quelques "
-"détails supplémentaires qui pourraient être utiles, sans insister.\n"
-"Votre réponse doit :\n"
-" - Être concise et informelle\n"
-" - Inclure une brève explication\n"
-" - Si pertinent, lister quelques détails supplémentaires potentiels\n"
-"Rappeler à l'utilisateur qu'il peut soit fournir ces détails s'il les a, "
-"soit passer à l'étape suivante via le bouton de l'interface.\n"
-"Il est absolument interdit de demander des informations juridiques ou légales à l'utilisateur.\n"
-"Concentrez-vous uniquement sur les aspects pertinents du cas, sans suggérer d'actions supplémentaires. "
-"Votre but est d'obtenir suffisamment de contexte pour fournir ultérieurement des informations juridiques précises et utiles.\n"
-"L'entrée de l'utilisateur se trouve ci-dessous :"
-
+"Vous êtes un assistant juridique spécialisé dans le droit suisse, chargé "
+"d'aider l'utilisateur à rédiger des informations sur la situation juridique "
+"d'un tiers. Analysez la description fournie par l'utilisateur et structurez "
+"une réponse concise en trois parties, sans utiliser d'en-têtes ou de "
+"numérotation :\n"
+" - Reformulez brièvement les éléments clés de la situation décrite.\n"
+" - Si nécessaire, suggérez des informations complémentaires de manière "
+"générale et hypothétique, au conditionnel. Vérifiez si le contexte, les "
+"parties impliquées, la chronologie et la localisation en Suisse sont "
+"mentionnés. Évitez toute suggestion trop précise ou demande de détails "
+"spécifiques.\n"
+" - Rappelez à l'utilisateur qu'il peut compléter les informations ou passer "
+"à l'étape suivante via l'interface.\n"
+"Consignes importantes :\n"
+" - Ne posez aucune question directe.\n"
+" - Évitez tout conseil juridique spécifique.\n"
+" - Restez neutre et factuel.\n"
+" - Concentrez-vous sur les aspects pertinents du cas.\n"
+" - Formulez votre réponse de manière concise et informelle.\n"
+"La description de l'utilisateur se trouve ci-dessous :"
 
 #~ msgid "System prompt"
 #~ msgstr ""

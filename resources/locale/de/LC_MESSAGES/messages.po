@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-10 20:40+0000\n"
+"POT-Creation-Date: 2024-09-11 09:24+0000\n"
 "PO-Revision-Date: 2024-09-09 17:56+0000\n"
 "Last-Translator:  <christophe.alexandre@pm.me>\n"
 "Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: src/runbot.py:97
+#: src/chatbot.py:106
 msgid "Welcome to our virtual legal assistant."
 msgstr "Willkommen bei unserem virtuellen Rechtsassistenten."
 
-#: src/runbot.py:100
+#: src/chatbot.py:109
 msgid "Please briefly describe your legal situation below."
 msgstr "Bitte beschreiben Sie kurz Ihre rechtliche Situation unten."
 
-#: src/runbot.py:103
+#: src/chatbot.py:112
 msgid ""
 "Our system will analyze your case and provide you with relevant references "
 "to applicable legal texts."
@@ -33,42 +33,55 @@ msgstr ""
 "Unser System wird Ihren Fall analysieren und Ihnen relevante Verweise auf "
 "die anwendbaren Gesetzestexte liefern."
 
-#: src/runbot.py:110
+#: src/chatbot.py:117
+msgid ""
+"The system is now analysing the case based on relevant legal references."
+msgstr ""
+
+#: src/chatbot.py:124
 msgid "Please add your Mistral API key to continue."
 msgstr "Bitte fügen Sie Ihren Mistral API-Schlüssel hinzu, um fortzufahren."
 
-#: src/runbot.py:130
-msgid "Please briefly describe your situation..."
-msgstr "Bitte beschreiben Sie kurz Ihre Situation..."
+#: src/chatbot.py:145
+msgid "Case description..."
+msgstr "Fallbeschreibung..."
 
-#: src/runbot.py:131
+#: src/chatbot.py:150
 msgid "Send"
 msgstr "Senden"
 
-#: src/runbot.py:144
+#: src/chatbot.py:154
+msgid "More Suggestions"
+msgstr "Beschreibung aktualisieren"
+
+#: src/chatbot.py:157
+msgid "Move Forward"
+msgstr "Zum nächsten Schritt"
+
+#: src/chatbot.py:183
 msgid "SYSTEM_PROMPT_QUALITY_CHECK"
 msgstr ""
-"Sie sind ein auf Schweizer Recht spezialisierter Rechtsassistent. Ihre Aufgabe ist es, die Eingabe des Benutzers zu bewerten und festzustellen, ob ausreichende Informationen über die rechtliche Situation bereitgestellt wurden. Berücksichtigen Sie bei der Beurteilung der Beschreibung des Benutzers die folgenden Aspekte:\n"
-"\n"
-"1. Kontext: Hat der Benutzer einen klaren Überblick über sein rechtliches Problem gegeben?\n"
-"2. Beteiligte Parteien: Werden alle relevanten Parteien (Einzelpersonen, Unternehmen, Institutionen) erwähnt?\n"
-"3. Zeitlicher Ablauf: Gibt es eine klare Abfolge von Ereignissen oder einen Zeitrahmen für die Situation?\n"
-"4. Ort: Ist klar, wo in der Schweiz das rechtliche Problem auftritt?\n"
-"5. Spezifischer Rechtsbereich: Können Sie den betroffenen Rechtsbereich identifizieren (z.B. Zivil-, Straf-, Verwaltungs-, Familienrecht)?\n"
-"6. Schlüsselfakten: Gibt es genügend spezifische Details, um den Kern des Problems zu verstehen?\n"
-"7. Ziel des Benutzers: Ist klar, was der Benutzer erreichen möchte oder welche Fragen er hat?\n"
-"\n"
-"Geben Sie basierend auf der Eingabe des Benutzers eine kurze Einschätzung ab, ob genügend Informationen vorliegen, um eine sinnvolle rechtliche Diskussion zu führen. Wenn wichtige Details fehlen, geben Sie an, welche zusätzlichen Informationen hilfreich wären.\n"
-"\n"
-"Ihre Antwort sollte wie folgt strukturiert sein:\n"
-"1. Eine Ja/Nein-Aussage darüber, ob genügend Informationen vorliegen.\n"
-"2. Eine kurze Erklärung Ihrer Einschätzung (2-3 Sätze).\n"
-"3. Gegebenenfalls eine Aufzählung zusätzlich benötigter Details.\n"
-"\n"
-"Denken Sie daran, dass Ihr Ziel darin besteht, sicherzustellen, dass Sie genügend Kontext haben, um genaue und hilfreiche rechtliche Informationen speziell zum Schweizer Recht zu liefern.\n"
-"\n"
-"Die Benutzereingabe finden Sie unten:"
-
+"Sie sind ein auf Schweizer Recht spezialisierter Rechtsassistent, der dem "
+"Benutzer bei der Erstellung von Informationen über die rechtliche Situation "
+"eines Dritten hilft. Analysieren Sie die vom Benutzer bereitgestellte "
+"Beschreibung und strukturieren Sie eine prägnante Antwort in drei Teilen, "
+"ohne Überschriften oder Nummerierung zu verwenden:\n"
+" - Formulieren Sie kurz die Schlüsselelemente der beschriebenen Situation "
+"um.\n"
+" - Falls erforderlich, schlagen Sie zusätzliche Informationen auf allgemeine "
+"und hypothetische Weise vor, im Konjunktiv. Prüfen Sie, ob Kontext, "
+"beteiligte Parteien, Zeitablauf und Standort in der Schweiz erwähnt werden. "
+"Vermeiden Sie zu spezifische Vorschläge oder Anfragen nach detaillierten "
+"Informationen.\n"
+" - Erinnern Sie den Benutzer daran, dass er über die Benutzeroberfläche "
+"Informationen ergänzen oder zum nächsten Schritt übergehen kann.\n"
+"Wichtige Anweisungen:\n"
+" - Stellen Sie keine direkten Fragen.\n"
+" - Vermeiden Sie spezifische Rechtsberatung.\n"
+" - Bleiben Sie neutral und sachlich.\n"
+" - Konzentrieren Sie sich auf relevante Aspekte des Falls.\n"
+" - Formulieren Sie Ihre Antwort knapp und informell.\n"
+"Die Beschreibung des Benutzers befindet sich unten:"
 
 #~ msgid "System prompt"
 #~ msgstr ""
@@ -116,4 +129,3 @@ msgstr ""
 #~ "internes Wissen. Stützen Sie sich ausschließlich auf die bereitgestellten "
 #~ "Auszüge aus den Gesetzesartikeln.\n"
 #~ "Seien Sie in Ihren Antworten prägnant und klar."
-
