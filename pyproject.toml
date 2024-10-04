@@ -20,7 +20,6 @@ python = "^3.12"
 streamlit = "^1.38.0"
 mistralai = "^1.0.3"
 chromadb = "^0.5.5"
-polib = "^1.2.0"
 
 [build-system]
 requires = ["poetry-core", "polib"]

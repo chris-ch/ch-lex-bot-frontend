@@ -31,11 +31,8 @@ msgmerge --update resources/locale/fr/LC_MESSAGES/messages.po resources/messages
 msgmerge --update resources/locale/it/LC_MESSAGES/messages.po resources/messages.pot
 ```
 
-Compiling translations to `.mo` from `.po`:
+Compiling translations to `.mo` from `.po` (normally, run automatically as part of the build process):
 
 ```bash
-msgfmt resources/locale/de/LC_MESSAGES/messages.po -o resources/locale/de/LC_MESSAGES/messages.mo
-msgfmt resources/locale/en/LC_MESSAGES/messages.po -o resources/locale/en/LC_MESSAGES/messages.mo
-msgfmt resources/locale/fr/LC_MESSAGES/messages.po -o resources/locale/fr/LC_MESSAGES/messages.mo
-msgfmt resources/locale/it/LC_MESSAGES/messages.po -o resources/locale/it/LC_MESSAGES/messages.mo
+poetry run compile-translations
 ```
