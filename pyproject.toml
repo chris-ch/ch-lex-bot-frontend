@@ -27,3 +27,8 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 streamlit-app = "scripts.app:run_script"
+compile-translations = "scripts.build:compile_translations"
+
+[tool.poetry.build]
+script = "scripts/build.py"
+generate-setup-file = false
