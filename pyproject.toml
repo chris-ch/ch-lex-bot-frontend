@@ -23,7 +23,7 @@ chromadb = "^0.5.5"
 polib = "^1.2.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core", "polib"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
