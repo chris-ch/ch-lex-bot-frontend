@@ -125,7 +125,7 @@ def start():
                 streamlit.session_state.messages.append(
                     {"role": "user", "content": user_description})
                 user_input.empty()
-                answer = handlers.handle_new_user_description(user_description)
+                answer = handlers.handle_new_user_description(user_description, mistral_api_key)
                 streamlit.session_state.messages.append(
                     {"role": "assistant", "content": answer})
                 streamlit.rerun()

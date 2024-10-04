@@ -7,7 +7,7 @@ import helpers
 from mistralai import Mistral, SystemMessage, UserMessage
 
 
-def handle_new_user_description(user_description: str) -> str:
+def handle_new_user_description(user_description: str, mistral_api_key: str) -> str:
     
     with streamlit.chat_message("user"):
         streamlit.markdown(user_description)
@@ -18,7 +18,6 @@ def handle_new_user_description(user_description: str) -> str:
     user_message = UserMessage(content=user_description)
     
     # Create a Mistral client.
-    mistral_api_key = os.getenv("MISTRAL_API_KEY")
     client_llm = Mistral(api_key=mistral_api_key)
     
     model_code = "mistral-large-2407"  # "mistral-large-2407", "open-mistral-nemo-2407", "open-mistral-7b"
