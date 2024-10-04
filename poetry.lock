@@ -1827,6 +1827,17 @@ typing = ["typing-extensions"]
 xmp = ["defusedxml"]
 
 [[package]]
+name = "polib"
+version = "1.2.0"
+description = "A library to manipulate gettext files (po and mo files)."
+optional = false
+python-versions = "*"
+files = [
+    {file = "polib-1.2.0-py2.py3-none-any.whl", hash = "sha256:1c77ee1b81feb31df9bca258cbc58db1bbb32d10214b173882452c73af06d62d"},
+    {file = "polib-1.2.0.tar.gz", hash = "sha256:f3ef94aefed6e183e342a8a269ae1fc4742ba193186ad76f175938621dbfc26b"},
+]
+
+[[package]]
 name = "posthog"
 version = "3.7.0"
 description = "Integrate PostHog into any python application."
@@ -3241,4 +3252,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "b8a4439d3dc3ba1f49c54b0f293dd0d6b0d1d5225d8c537bb0cb042ed541aab0"
+content-hash = "341e2fb33f7099cb4edcb296a548fd4f9fb80363fed34e7f72b62d9651253f44"
