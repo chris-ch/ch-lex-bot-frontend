@@ -1,3 +1,4 @@
+import logging
 import os
 import streamlit
 
@@ -19,9 +20,11 @@ def handle_new_user_description(user_description: str) -> str:
     # Create a Mistral client.
     mistral_api_key = os.getenv("MISTRAL_API_KEY")
     client_llm = Mistral(api_key=mistral_api_key)
-        
+    
+    model_code = "mistral-large-2407"  # "mistral-large-2407", "open-mistral-nemo-2407", "open-mistral-7b"
+    logging.info("using model: %s", model_code)
     response = client_llm.chat.complete(
-        model="open-mistral-7b",  # "mistral-large-2407", "open-mistral-nemo-2407", "open-mistral-7b"
+        model=model_code,
         messages=[system_message, user_message],
         max_tokens=None,
         temperature=0.,
